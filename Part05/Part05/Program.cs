@@ -7,9 +7,13 @@ namespace Part05
         {
             try
             {
-                Console.Write("Please enter value : ");
+                Console.Write("Please enter First Number : ");
                 int val1 = Convert.ToInt32(Console.ReadLine());
-                EventCheck(val1);
+
+                Console.Write("Please enter Final Number : ");
+                int val2 = Convert.ToInt32(Console.ReadLine());
+
+                Mod7(val1, val2);
             }
             catch (FormatException e)
             {
@@ -21,18 +25,15 @@ namespace Part05
             }
         }
 
-        static int EventCheck(int val1)
+        static void Mod7(int val1, int val2)
         {
-            if(val1 % 2 == 0)
+            for (int i = val1; i <= val2; i++)
             {
-                Console.WriteLine("{0} is Even Number", val1);
+                if (i % 7 == 0)
+                {
+                    Console.Write(i + " ");
+                }
             }
-            else
-            {
-                Console.WriteLine("{0} is Odd Number", val1);
-            }
-
-            return 0;
         }
     }
 }
