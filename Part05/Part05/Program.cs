@@ -7,16 +7,10 @@ namespace Part05
         {
             try
             {
-                Console.Write("Please enter width : ");
+                Console.Write("Please enter weight : ");
                 double w = Convert.ToDouble(Console.ReadLine());
 
-                Console.Write("Please enter length : ");
-                double l = Convert.ToDouble(Console.ReadLine());
-
-                Console.Write("Please enter height : ");
-                double h = Convert.ToDouble(Console.ReadLine());
-
-                Area(w, l, h);
+                weight(w);
             }
             catch (FormatException e)
             {
@@ -26,13 +20,12 @@ namespace Part05
             {
                 Console.WriteLine(e.Message);
             }
-            
         }
 
-        static void Area(double w, double l, double h)
+        static void weight(double w)
         {
-            double a = ((w + l) * h) * 1 / 2;
-            Console.WriteLine("Result = {0} cm^2", a);
+            double a = (w * 1.6);
+            Console.WriteLine("Weight = {0} N", a);
         }
     }
 }
